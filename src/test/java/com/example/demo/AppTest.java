@@ -8,7 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class AppTest {
 
+    App app = new App();
+
     @Test
     void getRandomPatternNumber() {
+        assert app.getRandomPatternNumber() >= 0 && app.getRandomPatternNumber() <= 6;
     }
 }
